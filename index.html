@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Tic Tac Toe Game">
+        <meta name="keywords" content="tic, tac, toe, game">
+        <meta name="author" content="Andi Irsandi R">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Tic Tac Toe</title>
+    </head>
+    <body>
+        <h1>Tic Tac Toe Game</h1>
+
+        <div>
+            <label for="grid-size">Scale:</label>
+            <input type="number" id="grid-size" min="3" max="12" value="3" onchange="updateGridSize()">
+        </div>
+
+        <div>
+            <label for="winning-length">Winning Condition:</label>
+            <input type="number" id="winning-length" value="3" min="3" max="12" onchange="updateGridSize()">
+        </div>
+
+        <button onclick="startGame()" id="start-btn">Start Game</button>
+
+        <div id="active-scale" class="info"></div>
+        <div id="turn" class="info">Turn: Player X</div>
+
+        <div id="game-container"></div>
+
+        <script src="js/index.js"></script>
+    </body>
+</html>
